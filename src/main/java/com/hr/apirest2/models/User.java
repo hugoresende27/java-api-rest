@@ -2,10 +2,10 @@ package com.hr.apirest2.models;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import java.util.Objects;
 
@@ -30,7 +30,7 @@ public class User {
     @Column(name = "id", unique = true)
     private Long id;//use Integer to not get null error, Long to not get bigger number
 
-    @Column(name = "username", length = 100, nullable = false,unique = true, columnDefinition = "dev")
+    @Column(name = "username", length = 100, nullable = false,unique = true)
     @NotNull (groups = CreateUser.class)
     @NotEmpty(groups = CreateUser.class)
     @Size(groups = CreateUser.class,min = 2, max = 100)

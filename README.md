@@ -1,4 +1,4 @@
-### https://www.youtube.com/watch?v=73KG4syqvNo&list=PLiXotHlANc8ptwP6wajo73OZo9Nh5i597&index=5
+### https://www.youtube.com/playlist?list=PLiXotHlANc8ptwP6wajo73OZo9Nh5i597
 
 - API's Restful
 - Application Programming Interface
@@ -24,6 +24,9 @@
 3. create-drop create new every time
 - spring.jpa.show-sql=true (to show all sql)
 - spring-boot-starter-validation (to add validation annotations)
+
+### mvn clean install
+### mvn spring-boot:run
 
 
 
