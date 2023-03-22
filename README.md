@@ -23,6 +23,7 @@
 2. none does notting
 3. create-drop create new every time
 - spring.jpa.show-sql=true (to show all sql)
+- spring-boot-starter-validation (to add validation annotations)
 
 
 
