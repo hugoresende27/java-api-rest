@@ -7,6 +7,8 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -43,7 +45,10 @@ public class User {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
-//    private List<Task> task = new ArrayList<>();
+    //OneToMany one user can have many tasks
+    //mappedBy to define who is using, use var name, not column _id
+    @OneToMany(mappedBy = "user")
+    private List<Task> task = new ArrayList<>();
 
 
     public User() {
@@ -53,6 +58,14 @@ public class User {
         this.id = id;
         this.username = username;
         this.password = password;
+    }
+
+    public List<Task> getTask() {
+        return task;
+    }
+
+    public void setTask(List<Task> task) {
+        this.task = task;
     }
 
     public Long getId() {
