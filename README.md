@@ -9,7 +9,7 @@
 #### model - data manipulation
 #### controller 
 
-#### packages created : 
+#### packages created/layers : 
 - models
 - controllers
 - repositories
