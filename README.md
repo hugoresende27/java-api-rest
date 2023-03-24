@@ -12,8 +12,8 @@
 #### packages created/layers : 
 - models
 - controllers
-- repositories
 - services
+- repositories
 - config
 
 ##### Notes
