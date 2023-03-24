@@ -1,7 +1,7 @@
 package com.hr.apirest2.services;
 
 import com.hr.apirest2.models.User;
-import com.hr.apirest2.repositories.TaskRepository;
+//import com.hr.apirest2.repositories.TaskRepository;
 import com.hr.apirest2.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,12 +10,12 @@ import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Service
-public class UserServices {
+public class UserService {
 
     @Autowired
     private UserRepository userRepository;
-    @Autowired
-    private TaskRepository taskRepository;
+//    @Autowired
+//    private TaskRepository taskRepository;
 
 
     public User findById(Long id){
@@ -30,7 +30,7 @@ public class UserServices {
     public User create(User obj){
         obj.setId(null);                            //to make sure ID is null
         obj = this.userRepository.save(obj);        //save the user
-        this.taskRepository.saveAll(obj.getTask()); //save all tasks of the user
+//        this.taskRepository.saveAll(obj.getTask()); //save all tasks of the user
         return obj;
     }
 
