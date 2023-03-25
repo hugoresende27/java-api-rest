@@ -48,7 +48,7 @@ public class User {
     //OneToMany one user can have many tasks
     //mappedBy to define who is using, use var name, not column _id
     @OneToMany(mappedBy = "user")
-    private List<Task> task = new ArrayList<>();
+    private List<Task> tasks = new ArrayList<>();
 
 
     public User() {
@@ -61,11 +61,11 @@ public class User {
     }
 
     public List<Task> getTask() {
-        return task;
+        return tasks;
     }
 
-    public void setTask(List<Task> task) {
-        this.task = task;
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
     }
 
     public Long getId() {
